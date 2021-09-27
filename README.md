@@ -6,7 +6,7 @@
 Make your rankings and save them to the cloud or export your favorite results to PDF to send to your friends over email. Attach images to your objects for a more visually distinct experience, and schedule reminders to continue rankings that are too large to finish in one sitting.  
 ## Storyboard  
 ## Functional Requirements  
-### Requirement 1: Ranking Objects and Saving Rankings  
+### Requirement 1:
 #### Scenario  
 
 #### Dependencies  
