@@ -10,18 +10,27 @@ It is hard to stay focused on your tasks with so many distractions in this world
 ### Requirement 1 
 
 **Given:** The user enters in a task
+
 **When:**  The user will see when said task is due(date and time)
+
 **Then:**  When task is completed, the user can close the task
+
 
 ### Requirement 2
 **Given:** There is an hour and when there are 30 minutes before the task is due 
+
 **When:** The website/app will remind user to complete said task
+
 **Then:** If the time of task is past, and the task is not completed, the task will appear in red. 
+
 
 ### Requirement 3
 **Given:** Previous tasks can be shown, and saved up to thirty days. 
+
 **When:** After the thirtieth date, all previous tasks, completed or not will be deleted.
+
 **Then:** Can not view previous tasks from other months, unless saved.
+
 
 ## Class Diagram  
 
