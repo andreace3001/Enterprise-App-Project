@@ -5,7 +5,7 @@ It is hard to stay focused on your tasks with so many distractions in this world
 
 
 ## Storyboard  
-<img height = "700" https://github.com/andreace3001/Enterprise-App-Project/blob/main/Storyboard.png /> 
+<img height = "700" src = "https://github.com/andreace3001/Enterprise-App-Project/blob/main/Storyboard.png" /> 
 ## Functional Requirements  
 ### Requirement 1:
 #### Scenario  
