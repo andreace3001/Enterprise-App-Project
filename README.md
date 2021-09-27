@@ -31,7 +31,7 @@ It is hard to stay focused on your tasks with so many distractions in this world
 
 
 ## Class Diagram  
-
+![Class Diagram](https://github.com/andreace3001/Enterprise-App-Project/blob/main/classDiagram.png)  
 ### Class Diagram Description  
 The diagram is broken into two important classes, users and tasks. The user class corresponds to any UI modifications relating to the creation of tasks. The tasks class focuses on parameters that can be edited specifically within. 
 ## Scrum Roles  
