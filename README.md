@@ -5,6 +5,7 @@ It is hard to stay focused on your tasks with so many distractions in this world
 
 
 ## Storyboard  
+![alt text]https://github.com/andreace3001/Enterprise-App-Project/blob/main/Storyboard.png
 ## Functional Requirements  
 ### Requirement 1:
 #### Scenario  
