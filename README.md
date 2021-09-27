@@ -33,7 +33,7 @@ When: After the thirtieth date, all previous tasks, completed or not will be del
 
 ### Class Diagram Description  
 ## Scrum Roles  
-- DevOps/Product Owner/Scrum Master: Andre asswipe
+- DevOps/Product Owner/Scrum Master: Andre Acebal
 - Frontend Developer: Blake Warner
-- Integration Developer: Charlie, Nick
+- Integration Developer: Charlie Phelps, Nick Lawson
 ## Weekly Meeting  
