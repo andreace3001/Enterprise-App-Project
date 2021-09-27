@@ -38,5 +38,5 @@ Make your rankings and save them to the cloud or export your favorite results to
 ## Scrum Roles  
 - DevOps/Product Owner/Scrum Master: 
 - Frontend Developer: Blake Warner, Andre asswipe
-- Integration Developer:
+- Integration Developer: Charlie, Nick
 ## Weekly Meeting  
