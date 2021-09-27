@@ -39,3 +39,4 @@ The diagram is broken into two important classes, users and tasks. The user clas
 - Frontend Developer: Blake Warner
 - Integration Developer: Charlie Phelps, Nick Lawson
 ## Weekly Meeting: Wednesday 5:00 pm. Discord or Teams
+## Jira Link: https://enterpriseappdevelopment21.atlassian.net/jira/software/projects/FP/boards/1
