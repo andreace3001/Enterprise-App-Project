@@ -18,14 +18,33 @@ import DTO.Task;
 public class TaskController {
  
     //Upload faculty info
-    private List<Task> theFaculties; 
+    private List<Task> tasks; 
 
 
     @PostConstruct
     private void loadData() {
         
-
+    	Task task1 = new Task(1, "Title", "thing");
+    	Task task2 = new Task(2, "Do homework for Abdou", "Programming");
+    	Task task3 = new Task(3, "Get off my butt", "Do something");
+    	
+    	tasks = new ArrayList<>();
+    	
+    	tasks.add(task1);
+    	tasks.add(task2);
+    	tasks.add(task3);
+    	
+    	
+    	
 
     }
+    
+  //Map to tasks
+	@GetMapping("/task")
+	public String taskList(Model theModel) {
+		theModel.addAttribute("tasks", theModel);
+		
+		return "task-tasks";
+	}
     
 }
