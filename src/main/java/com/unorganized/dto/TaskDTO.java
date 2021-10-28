@@ -6,7 +6,7 @@ import java.util.Locale;
 
 public class TaskDTO
 {	
-	private String taskName;
+	private String name;
 	private String description;
 	private LocalDate taskDate;
 	private int id;
@@ -14,10 +14,10 @@ public class TaskDTO
 	
 	
 	public String getTaskName() {
-		return taskName;
+		return name;
 	}
-	public void setTaskName(String taskName) {
-		this.taskName = taskName;
+	public void setTaskName(String name) {
+		this.name = name;
 	}
 	public String getDescription() {
 		return description;
@@ -43,7 +43,7 @@ public class TaskDTO
 	{
 		//Not sure if this is needed, will test later
 		//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd, MMM, yyyy", Locale.US);
-		return "TaskDTO [taskName=" + taskName + ", "
+		return "TaskDTO [taskName=" + name + ", "
 				+ "id=" + id + ", "
 				+ "description=" + description + ", "
 				//+ "taskDate=" + formatter.format(taskDate) + "]";
