@@ -6,21 +6,21 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import com.unorganized.dto.TaskDTO;
 
-public class TaskListDAO implements Serializable
+public class TaskListDAO implements ITaskListDAO
 {	
 	private static Path filePath = Paths.get(System.getProperty("user.dir") + "\\src\\main\\resources\\taskList.ser");	
-	private static List<TaskDTO> tasks;	
+	private List<TaskDTO> tasks;
 	
-	public static List<TaskDTO> readTasks()
+	public List<TaskDTO> readTasks()
     {                
 		if(!Files.exists(filePath))
 		{
@@ -51,28 +51,22 @@ public class TaskListDAO implements Serializable
         
     }
 	
-	public static void addTask(TaskDTO task)
+	public void addTask(TaskDTO task)
 	{
 		tasks.add(task);		
 	}
 	
-	public static List<TaskDTO> getTasks()
+	public List<TaskDTO> getTasks()
 	{
 		return tasks;		
 	}
 	
-	public static void deleteTask(String name)
+	public void deleteTask(String name)
 	{
-		for(TaskDTO task : tasks)
-		{
-			if(task.getTaskName() == name)
-			{
-				tasks.remove(task);
-			}
-		}
+		tasks.removeIf(task -> Objects.equals(task.getTaskName(), name));
 	}
 
-    public static void writeTasks()
+    public void writeTasks()
     {    	
                              
         try (FileOutputStream fileOut = new FileOutputStream(filePath.toFile())) 
