@@ -16,7 +16,6 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 
 @Controller
-@RequestMapping("/")
 public class UnorganizedController 
 {
 	private List<TaskDTO> tasks;	
@@ -47,7 +46,13 @@ public class UnorganizedController
 		TaskListDAO.addTask(task4);
 		TaskListDAO.addTask(task5);		
 		*/
-	}	
+	}
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home(Model model)
+	{
+		return "start";
+	}
 	
 	@RequestMapping(value="/start",method=RequestMethod.GET)
 	public String test(Model model) 
