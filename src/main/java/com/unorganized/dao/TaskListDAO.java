@@ -22,7 +22,7 @@ public class TaskListDAO implements Serializable
 	
 	public static List<TaskDTO> readTasks()
     {                
-		if(!Files.exists(filePath))
+		if (!Files.exists(filePath))
 		{
 			tasks = new ArrayList<>();
 			return tasks;
