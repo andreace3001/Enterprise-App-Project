@@ -11,8 +11,7 @@
 		<title>Unorganized</title>
 	</head>
 	<body>
-		<h2>Tasks</h2>
-		<!--<p th:text="${taskDTO}"/-->		
+		<h2>Tasks</h2>	
 		
 		<!-- For some reason this wasn't working on the array in the controller -->		
 		<div class='container'>
@@ -25,10 +24,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr th:each="theTaskDTO : ${taskDTO}">
-						<td th:text="${theTaskDTO.getTaskName}">
-						<td th:text="${theTaskDTO.getDescription}">
-						<td th:text="${theTaskDTO.getTaskDate}">
+					<tr th:each="tasks : ${taskList}">
+						<td th:text="${tasks.getTaskName}">
+						<td th:text="${tasks.getDescription}">
+						<td th:text="${tasks.getTaskDate}">
 				</tbody>
 	
 			</table>
