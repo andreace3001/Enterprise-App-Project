@@ -52,8 +52,8 @@ public class UnorganizedController
 	@RequestMapping(value="/start",method=RequestMethod.GET)
 	public String test(Model model) 
 	{
-		TaskDTO taskDTO = new TaskDTO("Poop", "Go to the bathroom", LocalDate.of(2021, 11, 27));
-		model.addAttribute("taskDTO", taskDTO);
+		TaskDTO theTaskDTO = new TaskDTO("Poop", "Go to the bathroom", LocalDate.of(2021, 11, 27));
+		model.addAttribute("taskDTO", theTaskDTO);
 				
 		return "start";
 	}
