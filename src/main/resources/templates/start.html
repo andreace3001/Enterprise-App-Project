@@ -4,21 +4,44 @@
 		<!-- Required meta tags -->
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    
+	    
 	
 	    <!-- Bootstrap CSS -->
 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	   
+	    <!-- Personal style sheet -->
+	    <link type="text/css" rel="stylesheet" href="/Enterprise-App-Project/src/main/resources/templates/start.css" />
+	    <style>
+	    .intro {
+	    	border-color: 9fa0ff;
+	    }
+	    </style>
 	
 		<title>Unorganized</title>
 	</head>
 	<body>
-		<h2>Tasks</h2>
-		<p th:text="${taskDTO}"/>		
-		
+		<h2>Unorganized</h2>
+		<!-- <p th:text="${taskDTO}"/>	 -->	
 		<!-- For some reason this wasn't working on the array in the controller -->		
-		<div class='container'>
-			<table class="table table-bordered">
+		
+		<div class="container-fluid">
+			<div class = "row">
+				<div class="col-md-auto vh-100 border border-dark">
+					<button type="button" class="btn btn-link"><i class="bi bi-calendar-day"></i>Daily</button>
+					
+					<br>
+					<button type="button" class="btn btn-link">Weekly</button>
+					<br>
+					<button type="button" class="btn btn-link">Completed</button>
+					<br>
+					<button type="button" class="btn btn-link">Link</button>
+				</div>
+				<div class="col border border-dark"> 
+				<div class = "container-fluid">
+					<table class="table table-bordered">
 				<thead>
-					<tr class="bg-danger">
+					<tr class="bg-light">
 						<th>Name</th>
 						<th>Description</th>
 						<th>Date</th>
@@ -32,7 +55,9 @@
 				</tbody>
 	
 			</table>
-		
+			</div>
+				</div>
+			</div>
 		</div>
 		
 		
