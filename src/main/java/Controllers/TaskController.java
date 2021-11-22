@@ -14,7 +14,7 @@ import DTO.Task;
 
 
 @Controller
-@RequestMapping("/Tasks")
+@RequestMapping("/tasks")
 public class TaskController {
  
     //Upload faculty info
@@ -40,7 +40,7 @@ public class TaskController {
     }
     
   //Map to tasks
-	@GetMapping("/task")
+	@GetMapping("/task-tasks")
 	public String taskList(Model theModel) {
 		theModel.addAttribute("tasks", theModel);
 		

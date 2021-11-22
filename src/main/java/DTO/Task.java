@@ -8,11 +8,7 @@ public class Task {
 	private String description;
 	//private Date taskDate;
 	//will add taskdate later
-	
-	public Task() {
-		
-	}
-	
+
 	public Task(int taskID, String title, String description) {
 		this.taskID = taskID;
 		this.title = title;
