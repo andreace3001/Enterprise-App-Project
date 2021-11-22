@@ -49,10 +49,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr th:each="theTasks : ${tasks}">
-						<td th:text="${theTasks.name}">
-						<td th:text="${theTasks.description}">
-						<td th:text="${theTasks.date}">
+					<tr th:each="theTaskDTO : ${taskDTO}">
+						<td th:text="${theTaskDTO.getTaskName}">
+						<td th:text="${theTaskDTO.getDescription}">
+						<td th:text="${theTaskDTO.getTaskDate}">
 				</tbody>
 	
 			</table>
