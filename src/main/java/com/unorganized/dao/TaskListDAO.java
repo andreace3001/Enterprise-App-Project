@@ -20,6 +20,7 @@ public class TaskListDAO implements Serializable
 	private static Path filePath = Paths.get(System.getProperty("user.dir") + "\\src\\main\\resources\\taskList.ser");	
 	private static List<TaskDTO> tasks;	
 	
+	@SuppressWarnings("unchecked")
 	public static List<TaskDTO> readTasks()
     {                
 		if(!Files.exists(filePath))
