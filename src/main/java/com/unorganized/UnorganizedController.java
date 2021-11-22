@@ -50,7 +50,7 @@ public class UnorganizedController
 	}	
 	
 	@RequestMapping(value="/start",method=RequestMethod.GET)
-	public String test(Model model) 
+	public String start(Model model)
 	{
 		TaskDTO taskDTO = new TaskDTO("Poop", "Go to the bathroom", LocalDate.of(2021, 11, 27));
 		model.addAttribute("taskDTO", taskDTO);
@@ -59,17 +59,17 @@ public class UnorganizedController
 	}
 	
 	@RequestMapping(value="/list", method=RequestMethod.GET)
-	public String read(Model model) 
+	public String list(Model model)
 	{		
 		//model.addAttribute("taskList", TaskListDAO.getTasks());		
 		model.addAttribute("taskList", tasks);	
 				
-		return "list-tasks";
-	}		
-	
-	
-	
-	
-	
+		return "list";
+	}
+
+
+
+
+
 
 }
