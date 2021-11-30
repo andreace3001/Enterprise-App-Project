@@ -22,7 +22,7 @@ public class Task
 	@Column(name="description")
 	private String description;
 	
-	@Column(name="email")
+	@Column(name="daily")
 	private Boolean daily;
 	
 	public Task() {}
