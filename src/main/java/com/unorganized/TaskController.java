@@ -25,11 +25,10 @@ public class TaskController
 	{
 		taskService = theTaskService;
 		
-	}
+	}	
 	
-	//Mapping for "/list"
-	@GetMapping("/list")
-	public String listFaculties(Model theModel)
+	@GetMapping("/start")
+	public String listTasks(Model theModel)
 	{
 		
 		//Retrieve faculties from the database
