@@ -1,4 +1,3 @@
-<!-- Similar to list-faculties from soitfaculty project done in class with Abdou. -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
@@ -32,7 +31,7 @@
 					<button type="button" class="btn btn-link"><i class="bi bi-calendar-day"></i>Daily</button>
 					
 					<br>
-					<button type="button" class="btn btn-link">Weekly</button>
+					<button type="button" class="btn btn-link" onClick"")>Weekly</button>
 					<br>
 					<button type="button" class="btn btn-link">Completed</button>
 					<br>
@@ -51,7 +50,8 @@
 				<tbody>
 					<tr th:each="theTasks : ${tasks}">
 						<td th:text="${theTasks.name}">
-						<td th:text="${theTasks.description}">						
+						<td th:text="${theTasks.description}">
+						<td th:text="${theTasks.date}">
 				</tbody>
 	
 			</table>
