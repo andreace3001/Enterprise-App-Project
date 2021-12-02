@@ -1,3 +1,4 @@
+<!-- similar to faculty-form.html file from soitfaculty -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -17,8 +18,22 @@
 List of Tasks</a>
 
 <!-- Invisible form as needed to update -->
-	<input type="hidden" th:field"">
+	<input type="hidden" th:field="*{id}"/>
+	
+
+
+<p class="h4 mb-4">Register Faculty</p>
+<form action="#" th:action="@{/Tasks/save}" th:object="${task}" method="POST"></form>
+
+
+<input type="text" th:field="*{taskName}"
+class="form-control mb-4 col-4" placeholder="Task Name">
+
+<input type="text" th:field="*{taskDescription}"
+class="form-control mb-4 col-4" placeholder="Task Description">
+
 
 </div>
-	
+
 </body>
+</html>

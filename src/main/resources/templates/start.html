@@ -1,41 +1,53 @@
-<!-- Similar to list-faculties from soitfaculty project done in class with Abdou. -->
+<!-- Similar to list-faculties from soitfaculty project done in class with Prof Fall. -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<!-- Required meta tags -->
-	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en" xmlns:th="http://thymeLeaf.org">
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+<title>UnOrganized</title>
+</head>
+<body>
+
+<div class="container">
+
+	<h4>UnOrganized to Organized</h4>
+	<hr>
 	
-	    <!-- Bootstrap CSS -->
-	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Create a button to add new faculty -->
+	<a th:href="@{/Tasks/viewAddForm}" class="btn btn-dark btn-sm mb-2">Add New Tasks</a>
 	
-		<title>Unorganized</title>
-	</head>
-	<body>
-		<h2>Tasks</h2>
-		<p th:text="${taskDTO}"/>		
-		
-		<!-- For some reason this wasn't working on the array in the controller -->		
-		<div class='container'>
-			<table class="table table-bordered">
-				<thead>
-					<tr class="bg-danger">
-						<th>Name</th>
-						<th>Description</th>
-						<th>Date</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="theTasks : ${tasks}">
-						<td th:text="${theTasks.name}">
-						<td th:text="${theTasks.description}">
-						<td th:text="${theTasks.date}">
-				</tbody>
 	
-			</table>
+	
+	
+	<table class="table table-bordered table-dark">
+		<thead>
+			<tr class="table-danger">
+				<th>Task Name</th>
+				<th>Task Description</th>
+				<th>Update Tasks</th>
+			<tr />
+		<thead />
+		<tbody>
+		<tr th:each="theTask : ${tasks}">
+		<td th:text="${theTask.taskName}">
+		<td th:text="${theTask.taskDescription}">
 		
-		</div>
+		<!-- Update Button -->
+		<td>
+		<a th:href="@{/Tasks/viewUpdateForm(taskId=${theTask.id})}"
+		class="btn btn-light btn-sm">Update</a>
 		
+		<!-- Delete Button -->
+		<td>
+		<a th:href="@{/Tasks/delete(taskId=${theTask.id})}"
+		class="btn btn-danger btn-sm" onclick="if(!(confirm('Please confirm that you want you want delete this Task')))return false">Delete</a>
 		
-	</body>
+		</tbody>
+	</table>
+</div>
+</body>
 </html>
